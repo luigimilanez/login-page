@@ -115,7 +115,8 @@ export default function Login() {
                                 value={email} 
                                 onChange={(event) => setEmail(event.target.value)} 
                                 placeholder="Email"
-                                autoComplete="email" />
+                                autoComplete="email" 
+                                disabled={isLoading} />
                                 {!isEmailValid && <div style={{position: "absolute", marginLeft: "2px"}}><Error>Email inválido</Error></div>}
                             </div>
 
@@ -125,7 +126,8 @@ export default function Login() {
                                 style={{...styleInput, border: !isPasswordValid ? "1px solid #c82d4c" : styleInput.border}}
                                 value={password} 
                                 onChange={(event) => setPassword(event.target.value)} 
-                                placeholder="Senha" />
+                                placeholder="Senha" 
+                                disabled={isLoading} />
                                 {!isPasswordValid && <div style={{position: "absolute", marginLeft: "2px"}}><Error>Senha deve ter pelo menos 6 caracteres</Error></div>}
                             </div>
 
