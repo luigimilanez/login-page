@@ -53,7 +53,9 @@ export default function Login() {
     useEffect(() => {
         if (email.length != 0) {
             validaEmail(email)
-        } 
+        } else {
+            setIsEmailValid(true)
+        }
 
         if ((password.length != 0 && password.length < 6)) {
             validaSenha(password)
